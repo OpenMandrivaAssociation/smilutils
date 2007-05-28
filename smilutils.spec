@@ -9,7 +9,6 @@ Name: 	 	%{name}
 Summary: 	Command line tools for Kino's SMIL video format
 Version: 	%{version}
 Release: 	%{release}
-
 Source:		%{name}-%{version}.tar.bz2
 URL:		http://sf.net/projects/kino
 License:	GPL
@@ -36,7 +35,7 @@ Group: 		Development/C
 Requires: 	%{libname} >= %{version}
 Provides:	%{name}-devel = %{version}-%{release} 
 Provides:	libkinoextensions-devel = %version-%release
-Obsoletes: 	%name-devel
+Obsoletes: 	%{name}-devel
 
 %description -n %{libname}-devel
 Libraries and includes files for developing programs based on %name.
