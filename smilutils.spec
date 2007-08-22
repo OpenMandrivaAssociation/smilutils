@@ -1,6 +1,6 @@
 %define name	smilutils
 %define version	0.3.2
-%define release %mkrel 0.4
+%define release %mkrel 20070731.1
 
 %define major	0
 %define libname %mklibname kinoextensions %major
@@ -9,7 +9,7 @@ Name: 	 	%{name}
 Summary: 	Command line tools for Kino's SMIL video format
 Version: 	%{version}
 Release: 	%{release}
-Source:		%{name}-%{version}.tar.bz2
+Source:		%{name}-20070731.tar.bz2
 URL:		http://sf.net/projects/kino
 License:	GPL
 Group:		Video
@@ -41,9 +41,10 @@ Obsoletes: 	%{name}-devel
 Libraries and includes files for developing programs based on %name.
 
 %prep
-%setup -q
+%setup -q -n %name
 
 %build
+./autogen.sh
 %configure2_5x
 %make
 										
