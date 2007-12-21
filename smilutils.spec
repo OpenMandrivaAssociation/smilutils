@@ -13,6 +13,7 @@ Source:		%{name}-20070731.tar.bz2
 URL:		http://sf.net/projects/kino
 License:	GPL
 Group:		Video
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	autoconf2.5
 BuildRequires:	libdv-devel quicktime-devel libxml2-devel
 BuildRequires:	SDL-devel libgdk_pixbuf2.0-devel 
