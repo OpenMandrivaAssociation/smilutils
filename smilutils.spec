@@ -6,6 +6,8 @@
 %define libname %mklibname kinoextensions %major
 
 %define _disable_ld_no_undefined 1
+%define _disable_ld_as_needed 1
+
 Name: 	 	%{name}
 Summary: 	Command line tools for Kino's SMIL video format
 Version: 	%{version}
@@ -54,6 +56,10 @@ Libraries and includes files for developing programs based on %name.
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
+
+if "%{_lib}" != "lib"
+	mv -f %buildroot%_prefix/lib %buildroot%_libdir
+fi
 
 %clean
 rm -rf $RPM_BUILD_ROOT
