@@ -57,9 +57,9 @@ Libraries and includes files for developing programs based on %name.
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
-if "%{_lib}" != "lib"
+%if "%{_lib}" != "lib"
 	mv -f %buildroot%_prefix/lib %buildroot%_libdir
-fi
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -75,12 +75,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n %libname
 %defattr(-,root,root)
-%{_libdir}/*.so.*
+%{_libdir}/kino/*.so.*
 
 %files -n %libname-devel
 %defattr(-,root,root)
-%{_libdir}/*.la
-%{_libdir}/*.a
-%{_libdir}/*.so
+%{_libdir}/kino/*.la
+%{_libdir}/kino/*.a
+%{_libdir}/kino/*.so
 
 
