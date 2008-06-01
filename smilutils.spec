@@ -1,6 +1,6 @@
 %define name	smilutils
 %define version	0.3.2
-%define release %mkrel 20070731.2
+%define release %mkrel 20070731.3
 
 %define major	0
 %define libname %mklibname kinoextensions %major
@@ -29,20 +29,10 @@ command line tools for SMIL manipulation.
 %package -n 	%{libname}
 Summary:        Dynamic libraries from %name
 Group:          System/Libraries
+Obsoletes:	%{libname}-devel
 
 %description -n %{libname}
 Dynamic libraries from %name.
-
-%package -n 	%{libname}-devel
-Summary: 	Header files and static libraries from %name
-Group: 		Development/C
-Requires: 	%{libname} >= %{version}
-Provides:	%{name}-devel = %{version}-%{release} 
-Provides:	libkinoextensions-devel = %version-%release
-Obsoletes: 	%{name}-devel
-
-%description -n %{libname}-devel
-Libraries and includes files for developing programs based on %name.
 
 %prep
 %setup -q -n %name
@@ -75,12 +65,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n %libname
 %defattr(-,root,root)
-%{_libdir}/kino/*.so.*
-
-%files -n %libname-devel
-%defattr(-,root,root)
-%{_libdir}/kino/*.la
-%{_libdir}/kino/*.a
-%{_libdir}/kino/*.so
-
-
+%{_libdir}/kino/*
