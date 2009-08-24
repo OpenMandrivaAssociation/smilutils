@@ -14,6 +14,7 @@ Version: 	%{version}
 Release: 	%{release}
 Source:		%{name}-20070731.tar.bz2
 Patch0:		smilutils-gcc4.3.patch
+Patch1:		smilutils-gcc4.4.patch
 URL:		http://sf.net/projects/kino
 License:	GPL
 Group:		Video
@@ -37,6 +38,7 @@ Dynamic libraries from %name.
 %prep
 %setup -q -n %name
 %patch0 -p1
+%patch1 -p1
 
 %build
 ./autogen.sh
