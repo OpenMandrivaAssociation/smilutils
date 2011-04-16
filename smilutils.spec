@@ -1,6 +1,6 @@
 %define name	smilutils
 %define version	0.3.2
-%define release %mkrel 4.6
+%define release %mkrel 4.7
 
 %define major	0
 %define libname %mklibname kinoextensions %major
