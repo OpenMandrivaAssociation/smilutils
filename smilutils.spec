@@ -1,6 +1,6 @@
 %define name	smilutils
 %define version	0.3.2
-%define release 1
+%define release 4.8
 
 %define major	0
 %define libname %mklibname kinoextensions %major
@@ -55,13 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
 
 %files
 %defattr(-,root,root)
