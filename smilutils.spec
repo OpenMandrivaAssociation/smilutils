@@ -65,3 +65,86 @@ rm -rf $RPM_BUILD_ROOT
 %files -n %libname
 %defattr(-,root,root)
 %{_libdir}/kino/*
+
+
+%changelog
+* Sat Feb 11 2012 Oden Eriksson <oeriksson@mandriva.com> 0.3.2-20070731.5
++ Revision: 773075
+- relink against libpcre.so.1
+
+* Wed Apr 27 2011 Sergio Rafael Lemke <sergio@mandriva.com> 0.3.2-20070731.4
++ Revision: 659762
+- bump release
+- imported package smilutils
+
+  + Tomasz Pawel Gajc <tpg@mandriva.org>
+    - rebuild
+
+  + Christophe Fergeau <cfergeau@mandriva.com>
+    - rebuild
+    - o fix gcc 4.4 build
+
+  + Antoine Ginies <aginies@mandriva.com>
+    - rebuild
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild early 2009.0 package (before pixel changes)
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Sun Jun 01 2008 Funda Wang <fwang@mandriva.org> 0.3.2-20070731.3mdv2009.0
++ Revision: 213977
+- /usr/lib/kino is not a devel files location
+- fix file list
+- move .so files into /usr/lib64
+- add debian patch for gcc 4.3
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Mon Dec 17 2007 Thierry Vignaud <tv@mandriva.org> 0.3.2-20070731.1mdv2008.1
++ Revision: 127381
+- kill re-definition of %%buildroot on Pixel's request
+
+* Wed Aug 22 2007 Austin Acton <austin@mandriva.org> 0.3.2-20070731.1mdv2008.0
++ Revision: 68816
+- use debian sources to fix problems
+
+* Fri Jun 08 2007 Herton Ronaldo Krzesinski <herton@mandriva.com.br> 0.3.2-0.4mdv2008.0
++ Revision: 37529
+- Rebuild with libslang2.
+
+* Mon May 28 2007 Funda Wang <fwang@mandriva.org> 0.3.2-0.3mdv2008.0
++ Revision: 31897
+- Rebuild against directfb 1.0
+
+
+* Thu Mar 01 2007 Emmanuel Andry <eandry@mandriva.org> 0.3.2-0.2mdv2007.0
++ Revision: 130396
+- rebuild for libgii
+- Import smilutils
+
+* Fri Jun 30 2006 Austin Acton <austin@mandriva.org> 0.3.2-1mdv2007.0
+- from Cris B <cris AT beebgames DOT com> :
+  - new version from CVS
+  - requires gdk_pixbuf2
+  - drop old patches
+
+* Thu Sep 01 2005 Gwenole Beauchesne <gbeauchesne@mandriva.com> 0.3.0-4mdk
+- fix for new libquicktime
+
+* Thu Oct 28 2004 Gwenole Beauchesne <gbeauchesne@mandrakesoft.com> 0.3.0-3mdk
+- C++ fixes
+
+* Fri Jun 04 2004 Michael Scherer <misc@mandrake.org> 0.3.0-2mdk 
+- rebuild for new libintl
+
+* Sat Apr 03 2004 Austin Acton <austin@mandrake.org> 0.3.0-1mdk
+- 0.3.0
+- redo buildrequires
+- rename library
+- add man pages
+- add devel files
+- configure 2.5
+
