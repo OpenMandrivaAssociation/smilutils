@@ -1,24 +1,20 @@
-%define name	smilutils
-%define version	0.3.2
-%define release 20070731.5
-
 %define major	0
 %define libname %mklibname kinoextensions %major
 
 %define _disable_ld_no_undefined 1
 %define _disable_ld_as_needed 1
 
-Name: 	 	%{name}
+Name: 	 	smilutils
 Summary: 	Command line tools for Kino's SMIL video format
-Version: 	%{version}
-Release: 	%{release}
+Version: 	0.3.2
+Release: 	20070731.6
 Source:		%{name}-20070731.tar.bz2
 Patch0:		smilutils-gcc4.3.patch
 Patch1:		smilutils-gcc4.4.patch
+Patch2:		smilutils-automake-1.13.patch
 URL:		http://sf.net/projects/kino
 License:	GPL
 Group:		Video
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	autoconf
 BuildRequires:	libdv-devel quicktime-devel libxml2-devel
 BuildRequires:	SDL-devel libgdk_pixbuf2.0-devel 
@@ -37,8 +33,7 @@ Dynamic libraries from %name.
 
 %prep
 %setup -q -n %name
-%patch0 -p1
-%patch1 -p1
+%apply_patches
 
 %build
 ./autogen.sh

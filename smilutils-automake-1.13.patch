@@ -1,0 +1,23 @@
+--- smilutils/configure.ac.bero	2013-01-16 02:30:03.980694479 +0100
++++ smilutils/configure.ac	2013-01-16 02:30:15.202559504 +0100
+@@ -4,9 +4,9 @@
+ # Initialization
+ # ######################################################################
+ 
+-AC_INIT()
+-AM_INIT_AUTOMAKE(smilutils, 0.3.2)
+-AM_CONFIG_HEADER(config.h)
++AC_INIT(smilutils, 0.3.2)
++AM_INIT_AUTOMAKE
++AC_CONFIG_HEADERS([config.h])
+ AM_PROG_LIBTOOL
+ AM_MAINTAINER_MODE
+ 
+@@ -34,7 +34,6 @@ AH_TEMPLATE([_REENTRANT],
+ AC_PROG_CC
+ AC_ISC_POSIX
+ AC_PROG_CXX
+-AM_PROG_CC_STDC
+ AC_HEADER_STDC
+ AC_C_BIGENDIAN
+ AC_SYS_LARGEFILE
