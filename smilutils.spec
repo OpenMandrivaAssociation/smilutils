@@ -19,7 +19,6 @@ BuildRequires:	autoconf
 BuildRequires:	libdv-devel quicktime-devel libxml2-devel
 BuildRequires:	SDL-devel libgdk_pixbuf2.0-devel 
 BuildRequires:	png-devel
-BuildRequires:	glib-2.0-devel
 BuildRequires:	glib2-devel
 
 %description
