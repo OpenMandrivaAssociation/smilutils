@@ -9,7 +9,7 @@
 Summary:	Command line tools for Kino's SMIL video format
 Name:		smilutils
 Version:	0.3.2
-Release:	20070731.10
+Release:	20070731.11
 License:	GPLv2
 Group:		Video
 Url:		http://sf.net/projects/kino
