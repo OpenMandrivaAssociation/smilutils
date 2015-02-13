@@ -58,7 +58,8 @@ This package contains the development library for %{name}.
 ./autogen.sh
 
 %build
-%configure2_5x --disable-static
+export CXX=g++
+%configure
 %make
 										
 %install
