@@ -54,7 +54,7 @@ This package contains the development library for %{name}.
 
 %prep
 %setup -qn %{name}
-%apply_patches
+%autopatch -p1
 ./autogen.sh
 
 %build
