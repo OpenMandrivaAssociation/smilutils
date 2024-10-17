@@ -12,7 +12,7 @@ Version:	0.3.2
 Release:	20070731.19
 License:	GPLv2
 Group:		Video
-Url:		http://sf.net/projects/kino
+Url:		https://sf.net/projects/kino
 Source0:	%{name}-20070731.tar.bz2
 Patch0:		smilutils-gcc4.3.patch
 Patch1:		smilutils-gcc4.4.patch
