@@ -17,6 +17,11 @@ Source0:	%{name}-20070731.tar.bz2
 Patch0:		smilutils-gcc4.3.patch
 Patch1:		smilutils-gcc4.4.patch
 Patch2:		smilutils-automake-1.13.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libdv)
